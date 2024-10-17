@@ -2,20 +2,16 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-landing-page',
+  selector: 'app-register-page',
   standalone: true,
   imports: [],
-  templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.css'
+  templateUrl: './register-page.component.html',
+  styleUrl: './register-page.component.css'
 })
-export class LandingPageComponent {
+export class RegisterPageComponent {
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   goToLogin(): void {
     this.router.navigate(['/login', {}]);
-  }
-
-  goToRegister(): void {
-    this.router.navigate(['/register', {}]);
   }
 }

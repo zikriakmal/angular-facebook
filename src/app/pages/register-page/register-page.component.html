@@ -5,17 +5,23 @@
                 <p class="pt-[112px] text-blue-600 text-5xl  font-bold text-center my-5">facebook</p>
                 <div class=" flex flex-col gap-3 bg-white shadow-lg rounded-md p-5 py-10  md:w-[350px]">
                     <div>
-                        <input type="username" autocomplete="username" placeholder="Username/Email Address"
+                        <input type="email" name="email" autocomplete="email" placeholder="Email Address"
                             class="border rounded-md px-2 py-2 w-full" />
                     </div>
                     <div>
-                        <input type="password" autocomplete="current-password" placeholder="Passwords"
+                        <input type="username" name="username" autocomplete="username" placeholder="Username"
                             class="border rounded-md px-2 py-2 w-full" />
                     </div>
-                    <button type="button" class="bg-blue-500 hover:bg-blue-400 py-2 rounded-md">
-                        <p class="text-white text-sm">Log In</p>
+                    <div>
+                        <input type="password" name="password" autocomplete="new-password" placeholder="Password"
+                            class="border rounded-md px-2 py-2 w-full" />
+                    </div>
+                    <button type="button" class="bg-green-500 hover:bg-green-400 py-2 rounded-md">
+                        <p class="text-white text-sm">Sign Up</p>
                     </button>
-                    <p class="text-center cursor-pointer text-blue-600 text-xs">Forgotten password?</p>
+                    <hr>
+                    <p (click)="goToLogin()" class="text-center cursor-pointer text-blue-600 text-xs">Already have an
+                        account</p>
                 </div>
             </form>
         </div>
