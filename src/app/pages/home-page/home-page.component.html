@@ -1,55 +1,18 @@
-<div class="bg-gray-200 flex-1 min-h-svh h-[10000px]">
-    <app-navbar />
-    <div class="flex my-4  flex-1 justify-center">
-        <div class="lg:flex hidden flex-1">
-            <div class="px-5 flex flex-col gap-2">
-                <div class="flex flex-row gap-3 items-center">
-                    <img src="/assets/images/sample/profile_image.png" class="h-10 w-10" alt="image" />
-                    <p class="font-medium">Zikri Akmal Santoso</p>
-                </div>
-                <div class="flex flex-row gap-3 items-center">
-                    <img src="/assets/images/sample/profile_image.png" class="h-10 w-10" alt="image" />
-                    <p class="font-light">Friends {{'(22 Online)'}}</p>
-                </div>
+<div class="bg-gray-100 flex-1 flex-col h-screen">
+    <div class="absolute top-0 w-full">
+        <app-navbar />
+    </div>
+    <div class="flex flex-1 justify-center pt-14  h-screen">
+        <div class="lg:flex flex-col hidden lg:flex-1">
+            <div class="overflow-y-scroll hover:overflow-y-auto custom-scroll w-80">
+                <app-home-left-side />
             </div>
         </div>
-        <div class="flex-1 flex flex-col  mx-5">
-            <div class="bg-white shadow-lg rounded-lg  my-2 p-2 py-4 gap-4 flex flex-col">
-                <div class="flex flex-row gap-3">
-                    <img src="/assets/images/sample/profile_image.png" class="h-10 w-10" alt="image" />
-                    <input placeholder="What's on your mind" type="text"
-                        class=" bg-gray-100 h-10 pl-5 rounded-full text-md placeholder:text-gray-500 flex-1">
-                </div>
-                <hr />
-                <div class="flex flex-row justify-around">
-                    <div>
-                        <p>Live video</p>
-                    </div>
-                    <div>
-                        <p>Photo/video</p>
-                    </div>
-                    <div class="hidden sm:flex">
-                        <p>Feeling/activity</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-
-            </div>
+        <div class="flex flex-1 flex-col mx-5 overflow-y-auto no-scrollbar">
+            <app-home-center-side />    
         </div>
-        <div class="md:flex hidden flex-1 content-end items-end justify-end">
-            <div class="w-[360px]">
-                <div>
-                    <p class="my-2">Sponsored</p>
-                    <div class="flex flex-row gap-2 items-center">
-                        <img src="/assets/images/sample/sponsored_1.png" class="w-40 h-40" alt="">
-                        <div>
-                            <p class="font-bold">Datacamp.com</p>
-                            <p>dapatkan kelas menarik</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="md:flex lg:flex-1  flex-row hidden content-end justify-end overflow-y-hidden">
+            <app-home-right-side />
         </div>
     </div>
 </div>

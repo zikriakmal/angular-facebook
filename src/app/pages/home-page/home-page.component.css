@@ -1,0 +1,30 @@
+ /* Hide scrollbar by default */
+ .custom-scroll {
+     scrollbar-width: none;
+     /* Firefox */
+     -ms-overflow-style: none;
+     /* Internet Explorer 10+ */
+ }
+
+ .custom-scroll::-webkit-scrollbar {
+     display: none;
+     /* Chrome, Safari, and Opera */
+ }
+
+ /* Show scrollbar on hover */
+ .custom-scroll:hover {
+     scrollbar-width: thin;
+     /* Firefox */
+ }
+
+ .custom-scroll:hover::-webkit-scrollbar {
+     display: block;
+     /* Chrome, Safari, and Opera */
+     width: 8px;
+ }
+
+ .custom-scroll:hover::-webkit-scrollbar-thumb {
+     background-color: rgba(100, 100, 100, 0.6);
+     /* Darker scrollbar thumb */
+     border-radius: 10px;
+ }

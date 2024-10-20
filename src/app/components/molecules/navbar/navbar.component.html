@@ -1,12 +1,13 @@
-<div class="sticky top-0 flex flex-row flex-1 bg-white shadow-md justify-between px-4 h-14 items-center">
-    <div class="flex flex-1 flex-row  gap-2">
+<div class="sticky top-0 flex flex-row flex-1 bg-white shadow-sm justify-between px-4 h-12 items-center">
+    <div class="flex flex-1 flex-row  gap-1">
         <a href="/home" class="w-10">
-            <img src="/assets/images/icons/ic_fb.png" class="h-10 w-10" alt="image">
+            <img src="/assets/images/icons/ic_fb.png" class="h-9 w-9" alt="image">
         </a>
         <div class="relative lg:flex flex-1 items-center hidden">
-            <input placeholder="Search facebook" type="text"
-                class=" bg-gray-100 h-10 pl-9 rounded-full text-md placeholder:text-gray-500">
-            <div class="absolute left-3"> <img src="/assets/images/icons/ic_search.png" class="h-4 w-4" alt="">
+            <input placeholder="Search Facebook" type="text"
+                class=" bg-gray-100 h-9 pl-9 rounded-full text-sm font-light placeholder:text-gray-500">
+            <div class="absolute left-3">
+                <img src="/assets/images/icons/ic_search.png" class="h-4 w-4" alt="">
             </div>
         </div>
         <div class="lg:hidden">
@@ -15,26 +16,25 @@
         </div>
     </div>
     <div class="hidden lg:flex lg:flex-1 items-center justify-center">
-        <div class="cursor-pointer border-b-2 border-b-[#2c64f6] h-14 flex-1 items-center justify-center flex">
+        <div class="cursor-pointer border-b-2 border-b-[#2c64f6] h-12 flex-1 items-center justify-center flex">
             <img src="/assets/images/icons/ic_home.png" class="h-5 w-5" alt="image">
         </div>
         <div
-            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
             <img src="/assets/images/icons/ic_video.png" class="h-5 w-6" alt="image">
         </div>
         <div
-            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
             <img src="/assets/images/icons/ic_marketplace.png" class="h-5 w-5" alt="image">
         </div>
         <div
-            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
             <img src="/assets/images/icons/ic_community.png" class="h-5 w-5" alt="image">
         </div>
         <div
-            class="cursor-pointer h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            class="cursor-pointer h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
             <img src="/assets/images/icons/ic_games.png" class="h-4 w-6" alt="image">
         </div>
-        <!-- <p>tass</p> -->
     </div>
     <div class="flex flex-1 items-center justify-end gap-2">
         <div
@@ -58,19 +58,21 @@
             </div>
         </div>
     </div>
-    <div class="origin-top-right absolute top-12 right-4 mt-1 w-56 
+    <div class="origin-top-right absolute top-12 right-4 mt-1 w-60 
 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 
 transition-all duration-200 ease-in transform dropdown" (transitionend)="onTransitionEnd()"
         [class]="isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'">
         @if(isOpen || isAnimating){
-        <div class="py-1">
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">See all profiles</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings & privacy</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help & support</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Display & accessibility</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Give feedback</a>
-            <p class="cursor-pointer block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" (click)="logout()">
-                Logout</p>
+        <div class="py-1 px-2">
+            <div (click)="logout()" class="flex flex-row cursor-pointer px-4 py-2 text-gray-700 hover:bg-gray-100 gap-2 items-center rounded-md">
+                <div class="h-8 w-8 flex justify-center items-center bg-gray-200 rounded-full">
+                    <img src="/assets/images/icons/ic_logout.png" class="h-4 w-4" alt="">
+                </div>
+                <p class=" text-sm" >Logout</p>
+            </div>
+            <p class="text-[10px] px-4">
+                Privacy · Terms · Advertising · Ad choices · Cookies · More · Meta © 2024
+            </p>
         </div>
         }
     </div>
