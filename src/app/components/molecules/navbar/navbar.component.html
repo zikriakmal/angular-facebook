@@ -1,0 +1,77 @@
+<div class="sticky top-0 flex flex-row flex-1 bg-white shadow-md justify-between px-4 h-14 items-center">
+    <div class="flex flex-1 flex-row  gap-2">
+        <a href="/home" class="w-10">
+            <img src="/assets/images/icons/ic_fb.png" class="h-10 w-10" alt="image">
+        </a>
+        <div class="relative lg:flex flex-1 items-center hidden">
+            <input placeholder="Search facebook" type="text"
+                class=" bg-gray-100 h-10 pl-9 rounded-full text-md placeholder:text-gray-500">
+            <div class="absolute left-3"> <img src="/assets/images/icons/ic_search.png" class="h-4 w-4" alt="">
+            </div>
+        </div>
+        <div class="lg:hidden">
+            <div class="rounded-full h-10 w-10 bg-gray-100 flex items-center justify-center cursor-pointer"> <img
+                    src="/assets/images/icons/ic_search.png" class="h-4 w-4" alt=""> </div>
+        </div>
+    </div>
+    <div class="hidden lg:flex lg:flex-1 items-center justify-center">
+        <div class="cursor-pointer border-b-2 border-b-[#2c64f6] h-14 flex-1 items-center justify-center flex">
+            <img src="/assets/images/icons/ic_home.png" class="h-5 w-5" alt="image">
+        </div>
+        <div
+            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            <img src="/assets/images/icons/ic_video.png" class="h-5 w-6" alt="image">
+        </div>
+        <div
+            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            <img src="/assets/images/icons/ic_marketplace.png" class="h-5 w-5" alt="image">
+        </div>
+        <div
+            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            <img src="/assets/images/icons/ic_community.png" class="h-5 w-5" alt="image">
+        </div>
+        <div
+            class="cursor-pointer h-14 flex-1 items-center justify-center flex hover:h-12 hover:bg-gray-300 hover:rounded-lg">
+            <img src="/assets/images/icons/ic_games.png" class="h-4 w-6" alt="image">
+        </div>
+        <!-- <p>tass</p> -->
+    </div>
+    <div class="flex flex-1 items-center justify-end gap-2">
+        <div
+            class="cursor-pointer rounded-full h-10 w-10 items-center justify-center flex bg-gray-200 hover:bg-gray-300">
+            <img src="/assets/images/icons/ic_more.png" class="h-4 w-4 self-center" alt="image" />
+        </div>
+        <div
+            class="cursor-pointer rounded-full h-10 w-10 items-center justify-center flex bg-gray-200 hover:bg-gray-300">
+            <img src="/assets/images/icons/ic_messaging.png" class="h-5 w-5" alt="image" />
+        </div>
+        <div
+            class="cursor-pointer rounded-full h-10 w-10 items-center justify-center flex bg-gray-200 hover:bg-gray-300">
+            <img src="/assets/images/icons/ic_notification.png" class="h-5 w-5" alt="image" />
+        </div>
+        <div (click)="toggleDropdown()"
+            class="profile-button cursor-pointer rounded-full h-10 w-10 items-center justify-center flex bg-gray-200 hover:bg-gray-300">
+            <img src="/assets/images/sample/profile_image.png" class="h-10 w-12" alt="image" />
+            <div
+                class="absolute bottom-2 right-4 bg-gray-200 rounded-full h-3 w-3 border border-white flex justify-center items-center">
+                <img src="/assets/images/icons/ic_chevron_bottom.png" class="h-1 w-2" alt="image" />
+            </div>
+        </div>
+    </div>
+    <div class="origin-top-right absolute top-12 right-4 mt-1 w-56 
+rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 
+transition-all duration-200 ease-in transform dropdown" (transitionend)="onTransitionEnd()"
+        [class]="isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'">
+        @if(isOpen || isAnimating){
+        <div class="py-1">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">See all profiles</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings & privacy</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help & support</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Display & accessibility</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Give feedback</a>
+            <p class="cursor-pointer block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" (click)="logout()">
+                Logout</p>
+        </div>
+        }
+    </div>
+</div>
