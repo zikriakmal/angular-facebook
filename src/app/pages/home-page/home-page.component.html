@@ -3,25 +3,69 @@
     {
     <div class="absolute w-full h-full bg-slate-100 bg-opacity-60 z-50 flex flex-1 items-center justify-center"
         (click)="closeCreatePostModal($event)">
-        <div class="bg-white shadow-md rounded-lg relative h-96 w-96" (click)="$event.stopPropagation()">
-            <div class="flex justify-center items-center p-5">
-                <p>Create post</p>
+        <div class="bg-white shadow-md rounded-lg relative w-[500px] mx-2 mb-10" (click)="$event.stopPropagation()">
+            <div class="flex justify-center items-center p-4">
+                <p class="font-bold text-xl">Create post</p>
                 <div (click)="closeCreatePostModal($event)"
-                    class="cursor-pointer absolute right-3 top-3 rounded-full h-10 w-10 bg-gray-200">
-                    <img src="" alt="">
+                    class="cursor-pointer absolute right-3 top-3 rounded-full h-10 w-10 bg-gray-200 flex items-center justify-center">
+                    <img src="/assets/images/icons/ic_close.png" class="h-4 w-4" alt="">
                 </div>
             </div>
             <hr />
-            <div class="p-2 flex flex-row gap-2">
-                <div class="rounded-full h-10 w-10 bg-blue-300">
-                    <p></p>
+            <div class="p-2 px-4 flex flex-row gap-2">
+                <div class="rounded-full h-10 w-10">
+                    <img src="/assets/images/sample/profile_image.png" class="h-10 w-10" alt="">
                 </div>
                 <div class="flex flex-col items-start">
                     <p>Zikri Akmal Santoso</p>
-                    <div class="bg-slate-200 rounded-md hover:bg-gray-300 cursor-pointer">
+                    <div
+                        class="bg-slate-200 rounded-md hover:bg-gray-300 cursor-pointer flex flex-row items-center px-2">
+                        <img src="/assets/images/icons/ic_friends_post.png" class="h-3" alt="">
                         <p class="text-xs px-2 py-[2px] ">Friends</p>
+                        <img src="/assets/images/icons/ic_arrow_post.png" class="h-1" alt="">
                     </div>
                 </div>
+            </div>
+            <div class="px-4 flex-1 p-2">
+                <textarea placeholder="What's on your mind, Zikri?"
+                    class="min-h-24 w-full text-2xl focus:outline-none"></textarea>
+            </div>
+            <div class="flex flex-row justify-between items-center p-2 px-4">
+                <div class="cursor-pointer">
+                    <img src="/assets/images/icons/ic_color.png" class="h-8 border-2 border-white shadow-lg rounded-lg"
+                        alt="">
+                </div>
+                <div class="cursor-pointer">
+                    <img src="/assets/images/icons/ic_emoticon.png" class="h-6" alt="">
+                </div>
+            </div>
+            <div class="my-2 mx-4 rounded-lg border shadow-lg flex-1 bg-white px-4 py-2 flex flex-row justify-between items-center">
+                <p class="font-semibold cursor-pointer text-sm">Add to your post</p>
+                <div class="flex flex-row items-center">
+                    <div class="cursor-pointer rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200">
+                        <img src="/assets/images/icons/ic_image_post.png" class="h-6" alt="">
+                    </div>
+                    <div class="cursor-pointer rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200">
+                        <img src="/assets/images/icons/ic_friend_tag.png" class="h-6" alt="">
+                    </div>
+                    <div class="cursor-pointer rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200">
+                        <img src="/assets/images/icons/ic_emoticon_orange.png" class="h-6" alt="">
+                    </div>
+                    <div class="cursor-pointer rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200">
+                        <img src="/assets/images/icons/ic_location.png" class="h-6" alt="">
+                    </div>
+                    <div class="cursor-pointer rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200">
+                        <img src="/assets/images/icons/ic_gif.png" class="h-6" alt="">
+                    </div>
+                    <div class="cursor-pointer rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200">
+                        <img src="/assets/images/icons/ic_more_post.png" class="h-1" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="mx-4 flex-1 my-4">
+                <button type="button" class="bg-blue-500 hover:bg-blue-400 py-2 rounded-md w-full">
+                    <p class="text-white text-sm font-semibold">Post</p>
+                </button>
             </div>
         </div>
     </div>
