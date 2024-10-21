@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home-center-side',
@@ -8,9 +8,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './home-center-side.component.css'
 })
 export class HomeCenterSideComponent {
-  @Input() openCreatePostModal?: void;
+  @Output() openCreatePostModal: EventEmitter<void> = new EventEmitter<void>();
 
   openPostModal() {
-    this.openCreatePostModal
+    this.openCreatePostModal.emit();  // Emit the event to the parent
   }
+
 }

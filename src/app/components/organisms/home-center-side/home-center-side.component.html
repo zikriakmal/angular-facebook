@@ -2,7 +2,7 @@
     <div class="bg-white shadow-md rounded-lg my-2 px-2 py-4 gap-4 flex flex-col mx-1">
         <div class="flex flex-row gap-3">
             <img src="/assets/images/sample/profile_image.png" class="h-10 w-10" alt="image" />
-            <div class="cursor-pointer bg-gray-100 h-10 pl-5 rounded-full text-md placeholder:text-gray-500 flex-1 flex items-center hover:bg-gray-200">
+            <div (click)="openPostModal()" class="cursor-pointer bg-gray-100 h-10 pl-5 rounded-full text-md placeholder:text-gray-500 flex-1 flex items-center hover:bg-gray-200">
                     <p class="text-md font-thin text-gray-800">What's on your mind, Zikri?</p>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { NavbarComponent } from "../../components/molecules/navbar/navbar.component";
 import { HomeCenterSideComponent } from "../../components/organisms/home-center-side/home-center-side.component";
 import { HomeLeftSideComponent } from "../../components/organisms/home-left-side/home-left-side.component";
@@ -19,8 +19,7 @@ import { HomeRightSideComponent } from "../../components/organisms/home-right-si
 export class HomePageComponent {
   isCreatePostModalOpen = true;
 
-  constructor() {
-  }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   openCreatePostModal(): void {
     this.isCreatePostModalOpen = true;
