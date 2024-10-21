@@ -17,5 +17,17 @@ import { HomeRightSideComponent } from "../../components/organisms/home-right-si
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
+  isCreatePostModalOpen = true;
+
+  constructor() {
+  }
+
+  openCreatePostModal(): void {
+    this.isCreatePostModalOpen = true;
+  }
+
+  closeCreatePostModal(event: Event): void {
+    this.isCreatePostModalOpen = false;
+  }
 
 }

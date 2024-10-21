@@ -1,4 +1,32 @@
 <div class="bg-gray-100 flex-1 flex-col h-screen">
+    @if(isCreatePostModalOpen)
+    {
+    <div class="absolute w-full h-full bg-slate-100 bg-opacity-60 z-50 flex flex-1 items-center justify-center"
+        (click)="closeCreatePostModal($event)">
+        <div class="bg-white shadow-md rounded-lg relative h-96 w-96" (click)="$event.stopPropagation()">
+            <div class="flex justify-center items-center p-5">
+                <p>Create post</p>
+                <div (click)="closeCreatePostModal($event)"
+                    class="cursor-pointer absolute right-3 top-3 rounded-full h-10 w-10 bg-gray-200">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <hr />
+            <div class="p-2 flex flex-row gap-2">
+                <div class="rounded-full h-10 w-10 bg-blue-300">
+                    <p></p>
+                </div>
+                <div class="flex flex-col items-start">
+                    <p>Zikri Akmal Santoso</p>
+                    <div class="bg-slate-200 rounded-md hover:bg-gray-300 cursor-pointer">
+                        <p class="text-xs px-2 py-[2px] ">Friends</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
     <div class="absolute top-0 w-full">
         <app-navbar />
     </div>
@@ -9,10 +37,11 @@
             </div>
         </div>
         <div class="flex flex-1 flex-col mx-5 overflow-y-auto no-scrollbar">
-            <app-home-center-side />    
+            <app-home-center-side [openCreatePostModal]="openCreatePostModal()" />
         </div>
         <div class="md:flex lg:flex-1  flex-row hidden content-end justify-end overflow-y-hidden">
             <app-home-right-side />
         </div>
     </div>
+
 </div>
