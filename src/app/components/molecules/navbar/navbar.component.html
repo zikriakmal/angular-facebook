@@ -16,24 +16,34 @@
         </div>
     </div>
     <div class="hidden lg:flex lg:flex-1 items-center justify-center">
-        <div class="cursor-pointer border-b-2 border-b-[#2c64f6] h-12 flex-1 items-center justify-center flex">
+        <div (click)="changeActiveNav('home')" class="cursor-pointer justify-center flex" [class]="activeNav === 'home' ? 
+            'border-b-2 border-b-[#2c64f6] h-12 flex-1 items-center' : 
+            'h-14 flex-1 items-center hover:h-10 hover:bg-gray-100 hover:rounded-lg'">
             <img src="/assets/images/icons/ic_home.png" class="h-5 w-5" alt="image">
         </div>
-        <div
-            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
+        <div (click)="changeActiveNav('video')"
+            [class]="activeNav === 'video' ? 
+            'cursor-pointer border-b-2 border-b-[#2c64f6] h-12 flex-1 items-center justify-center flex' : 
+            'cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg' ">
             <img src="/assets/images/icons/ic_video.png" class="h-5 w-6" alt="image">
         </div>
-        <div
-            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
+        <div (click)="changeActiveNav('marketplace')"
+            [class]="activeNav === 'marketplace' ? 
+            'cursor-pointer border-b-2 border-b-[#2c64f6] h-12 flex-1 items-center justify-center flex' : 
+            'cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg' ">
             <img src="/assets/images/icons/ic_marketplace.png" class="h-5 w-5" alt="image">
         </div>
-        <div
-            class="cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
-            <img src="/assets/images/icons/ic_community.png" class="h-5 w-5" alt="image">
+        <div (click)="changeActiveNav('community')"
+            [class]="activeNav === 'community' ? 
+            'cursor-pointer border-b-2 border-b-[#2c64f6] h-12 flex-1 items-center justify-center flex' : 
+            'cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg' ">
+            <img src="/assets/images/icons/ic_community.png" class="h-5 " alt="image">
         </div>
-        <div
-            class="cursor-pointer h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg">
-            <img src="/assets/images/icons/ic_games.png" class="h-4 w-6" alt="image">
+        <div (click)="changeActiveNav('games')"
+            [class]="activeNav === 'games' ? 
+            'cursor-pointer border-b-2 border-b-[#2c64f6] h-12 flex-1 items-center justify-center flex' : 
+            'cursor-pointer  h-14 flex-1 items-center justify-center flex hover:h-10 hover:bg-gray-100 hover:rounded-lg' ">
+            <img src="/assets/images/icons/ic_games.png" class="h-4" alt="image">
         </div>
     </div>
     <div class="flex flex-1 items-center justify-end gap-2">
@@ -64,11 +74,12 @@ transition-all duration-200 ease-in transform dropdown" (transitionend)="onTrans
         [class]="isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'">
         @if(isOpen || isAnimating){
         <div class="py-1 px-2">
-            <div (click)="logout()" class="flex flex-row cursor-pointer px-4 py-2 text-gray-700 hover:bg-gray-100 gap-2 items-center rounded-md">
+            <div (click)="logout()"
+                class="flex flex-row cursor-pointer px-4 py-2 text-gray-700 hover:bg-gray-100 gap-2 items-center rounded-md">
                 <div class="h-8 w-8 flex justify-center items-center bg-gray-200 rounded-full">
                     <img src="/assets/images/icons/ic_logout.png" class="h-4 w-4" alt="">
                 </div>
-                <p class=" text-sm" >Logout</p>
+                <p class=" text-sm">Logout</p>
             </div>
             <p class="text-[10px] px-4">
                 Privacy · Terms · Advertising · Ad choices · Cookies · More · Meta © 2024

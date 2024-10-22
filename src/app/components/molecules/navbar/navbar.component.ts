@@ -1,6 +1,9 @@
 import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+
+type ActiveNav = 'home' | 'video' | 'marketplace' | 'community' | 'games'
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -11,8 +14,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent {
   constructor(private route: ActivatedRoute, private router: Router) { }
 
+
   isOpen = false;
   isAnimating = false;
+
+  activeNav: ActiveNav = 'home';
 
   toggleDropdown() {
     if (!this.isOpen) {
@@ -39,6 +45,10 @@ export class NavbarComponent {
       this.isAnimating = true;
       this.isOpen = false;
     }
+  }
+
+  changeActiveNav(newActiveNav:ActiveNav){
+    this.activeNav = newActiveNav;
   }
 
   logout() {
